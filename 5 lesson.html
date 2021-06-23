@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 lesson </title>
+</head>
+
+<body>
+
+    <script>
+
+        //1 Пример
+
+        let link = document.getElementById('four');
+        console.log(link);
+
+        //2 Пример
+
+
+        let ones = document.getElementsByClassName('one');
+        console.log(ones);
+
+
+        //3 Пример
+
+
+        let div = document.querySelector('[aria-valuenow="50"]');
+        console.log(div);
+
+        //4 Пример
+
+        console.log(document.title);
+
+
+        // 5 Пример 
+        let mt0El = document.querySelector('.mt-0');
+        console.log(mt0El.parentNode);
+
+
+        //6 Пример 
+
+        let div = document.querySelector('div');
+        let h3 = document.createElement('h3');
+        h3.innerText = 'Hello world';
+        div.appendChild(h3);
+
+        // 7 Пример
+
+        let btnWarn = document.querySelector('.btn-outline-warning');
+        btnWarn.remove();
+        let btnDark = document.querySelector('.btn-outline-dark');
+        btnDark.remove();
+
+        // 8 Пример 
+
+        let btn = document.querySelector('.btn-info');
+        btn.innerText = 'Кнопка';
+
+        //9 пример 
+
+        let ul = document.querySelector('ul');
+        ul.classList.add('one');
+
+        //10 пример
+
+        let navLinkEl = document.querySelector('.nav-link');
+        navLinkEl.classList.toggle('active');
+
+
+        //11 пример 
+
+        let div = document.querySelector('.menu');
+        div.insertAdjacentHTML('afterbegin', '<a href="#">link</a>');
+
+
+        //12 пример 
+
+        let button = document.querySelector('button');
+        console.log(button.getAttribute('data-dismiss'));
+        console.log(button.getAttribute('aria-label');
+
+        //13 пример 
+
+        let h1 = document.querySelector('h1');
+        h1.setAttribute('data-one', 'один');
+        h1.setAttribute('data-two', 'два');
+
+
+        // обработка событий 
+
+        //1 пример 
+
+        document.addEventListener('DOMContentLoaded', function () {
+            alert("все теги добавлены на страницу");
+        });
+
+
+        //2 пример 
+
+        window.addEventListener('load', function () {
+            alert("все картинки загружены");
+        });
+
+        //3 пример  клик
+
+        let btn = document.querySelector('.btn');
+        btn.addEventListener('click', function () {
+            alert('клик');
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>
