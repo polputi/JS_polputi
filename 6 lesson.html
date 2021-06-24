@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Пример 1
+
+    <div>Lorem, ipsum dolor.</div>
+    <div>Lorem, ipsum dolor.</div>
+    <div>Lorem, ipsum dolor.</div>
+
+
+    <script>
+
+        let divs = document.getElementsByTagName('div');
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].style.padding = '10px';
+        }
+    </script>
+
+    Пример 2
+
+    <script>
+
+        setTimeout(function () {
+            alert('message');
+        }, 3000
+
+    </script>
+
+    Пример 3
+
+    <form action="">
+        <input type="text"><br>
+        <input type="text"><br>
+        <input type="text"><br>
+        <input type="text"><br>
+    </form>
+
+    <script>
+
+        let inputs = document.querySelectorAll('input');
+        inputs.forEach(function (input) {
+            input.style.marginBottom = '10px';
+        });
+    </script>
+
+    Пример 4
+
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+
+
+
+    <script>
+
+        let inputs = document.querySelectorAll('input');
+        inputs.forEach(function (input) {
+            input.insertAdjacentHTML('afterend', '<br>');
+        });
+    </script>
+
+
+    Пример 5 получение значений из инпутов
+
+    <input id="from" type="text">
+
+    <script>
+
+        let span = document.querySelector('span');
+        let fromEl = document.querySelector('input');
+        fromEl.addEventListener('change', function (event) {
+            span.textContent = event.target.value;
+        });
+    </script>
+
+
+    Пример 6 анимация
+    <button>Показать блок</button>
+    <div class="message">
+        Lorem ipsum dolor sit.
+    </div>
+
+    <script>
+
+        let btn = document.querySelector('button');
+        let msg = document.querySelector('.message');
+        btn.addEventListener('click', function () {
+            msg.style.display = 'block';
+            msg.classList.add('animate__animated', 'animate__fadeInLeftBig');
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>
